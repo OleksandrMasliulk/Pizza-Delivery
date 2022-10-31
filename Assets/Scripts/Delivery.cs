@@ -3,6 +3,7 @@ using UnityEngine;
 public class Delivery : MonoBehaviour
 {
     private bool _hasPizza = false;
+    [SerializeField] private float _destroyPizzaDelay;
 
     private void OnCollisionEnter2D(Collision2D other) 
     {
@@ -15,8 +16,9 @@ public class Delivery : MonoBehaviour
         {
             Debug.Log("Pizza picked up!");
             _hasPizza = true;
+            Destroy(other.gameObject, _destroyPizzaDelay);
         }
-        
+
         if (other.CompareTag("Customer") && _hasPizza)
         {
             Debug.Log("Pizza delivered!");
