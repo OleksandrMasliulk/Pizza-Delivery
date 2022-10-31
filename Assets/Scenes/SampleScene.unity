@@ -9843,6 +9843,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyPizzaDelay: 1
+  _defaultColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  _hasPizzaColor:
+    serializedVersion: 2
+    rgba: 4278255601
 --- !u!1 &1562054709
 GameObject:
   m_ObjectHideFlags: 0
