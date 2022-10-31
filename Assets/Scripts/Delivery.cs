@@ -21,11 +21,6 @@ public class Delivery : MonoBehaviour
         _spriteRenderer.color = _defaultColor;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) 
-    {
-        Debug.Log($"Car bumped into a {other.gameObject.name}!");
-    }
-
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if (other.CompareTag("Pizza") && !_hasPizza)
